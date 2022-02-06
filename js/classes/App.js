@@ -1,4 +1,4 @@
-import { datosCita, nuevaCita } from './../functions.js';
+import { crearDB, datosCita, nuevaCita } from './../functions.js';
 import {
   mascotaInput,
   propietarioInput,
@@ -14,6 +14,8 @@ class App {
     this.initApp();
   }
   initApp() {
+    crearDB();
+
     mascotaInput.addEventListener('input', datosCita);
     propietarioInput.addEventListener('input', datosCita);
     telefonoInput.addEventListener('input', datosCita);
